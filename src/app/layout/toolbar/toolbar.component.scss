@@ -1,0 +1,25 @@
+.flex-stretch{
+    flex: 1 0 auto;
+ }
+ 
+ .mr-8{
+    margin-right: 8px;
+ }
+ 
+ ul {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   list-style-position: inside;
+   list-style-type: none;
+}
+
+mat-toolbar{
+   z-index: 1;
+   box-shadow: 0 10px 30px -10px #3f51b5;
+}
+
+.logo-toolbar{
+   height: 70%;
+   width: 50px;
+}

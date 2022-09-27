@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 1921 1725">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-opacity: 0;
+        stroke: #000;
+        stroke-width: 78.37px;
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        font-size: 583.333px;
+        font-family: Verdana;
+      }
+    </style>
+  </defs>
+  <path id="Poligono_1" data-name="Poligono 1" class="cls-1" d="M77,863L518,99.166h882L1841,863l-441,763.83H518Z"/>
+  <text id="R" class="cls-2" x="829" y="1074.999">R</text>
+  <text id="B" class="cls-2" transform="matrix(-1, 0, 0, 1, 1062, 1074.999)">B</text>
+</svg>

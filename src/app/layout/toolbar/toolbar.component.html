@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+
+    <div class="logo-toolbar">
+        <a href="./">
+            <app-icon></app-icon>
+        </a>
+    </div>
+
+    <div class="flex-stretch"></div>
+
+    <ul *ngIf="!(isHandset$ | async)">
+        <li *ngFor="let item of menuList" class="mr-8"><a href="{{item.url}}">{{item.name}}</a></li>
+    </ul>
+
+    <button mat-icon-button 
+    (click)="toggleMode()"
+    attr.aria-label="{{ariaLabelMode}}"
+    title="{{ariaLabelMode}}" 
+    *ngIf="!(isHandset$ | async)">
+        <mat-icon>{{iconMode}}</mat-icon>
+    </button>
+
+    <button mat-icon-button (click)="toggleMenu()" *ngIf="(isHandset$ | async)">
+        <mat-icon aria-label="Open side menu" >menu</mat-icon>
+    </button>
+    
+</mat-toolbar>

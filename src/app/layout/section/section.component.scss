@@ -1,0 +1,35 @@
+mat-card{
+    margin: 3em;
+
+    div {
+        float: left;
+        
+        img{
+            width: 14em;
+            border-radius: 4px;
+        }
+    }
+
+    .mat-card-image{
+        margin: 0 -16px 16px 0px;
+    }
+    .mat-card-image:first-child{
+        margin-top: 0px;
+    }
+
+    mat-card-header.mat-card-header{
+        padding-left: 16px;
+    }
+    
+    mat-card-content{
+        padding: 0 0 0 32px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    mat-card-actions{
+        text-align: end;
+    }
+
+    
+}
