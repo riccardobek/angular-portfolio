@@ -1,20 +1,21 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { EnvironmentService } from './services/environment.service';
 import { Menu } from './model/menu.model';
-import { Section } from './model/section.model';
 import { MatSidenav } from '@angular/material/sidenav';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { UtilityService } from './services/utility.service';
+import { Section } from './model/section.model';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss', "./layout/section/section.component.scss"]
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements AfterViewInit {
   name!:string;
   profession!:string;
   profileImage!:string;
+  educationSection:Section;
   
   menu !: Menu[];
   darkMode : boolean = false;
@@ -30,6 +31,7 @@ export class AppComponent implements OnInit {
     this.name = _env.getName();
     this.profession = _env.getProfession();
     this.profileImage = _env.getProfileImage();
+    this.educationSection = _env.getEducation();
 
   }
 
@@ -38,8 +40,8 @@ export class AppComponent implements OnInit {
     this.darkMode = $ev.darkMode;
   }
 
-  ngOnInit(): void {
-
+  ngAfterViewInit(): void {
+    
     /**
      * This observer understand if we are in front of a screen under 800px
      * It inform the utility service to change any other component
@@ -49,12 +51,10 @@ export class AppComponent implements OnInit {
         if(res.matches){
           this.sidenav.mode = "over";
           this.sidenav.close();
-          console.log("under 800")
         }
         else{
           this.sidenav.mode = "side";
           this.sidenav.open();
-          console.log("over 800")
         }
       }
       

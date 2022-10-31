@@ -1,6 +1,6 @@
+import { SectionContent } from "./section-content.model"
+
 export interface Section{
-    title: string,
-    subtitle: string,
-    content: string,
-    id: string
+    id: string,
+    content: SectionContent[]
 }

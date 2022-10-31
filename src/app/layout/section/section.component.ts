@@ -1,5 +1,5 @@
 import { Component, Input } from "@angular/core";
-import { Section } from "../../model/section.model"
+import { SectionContent } from "src/app/model/section-content.model";
 
 @Component({
     selector: "app-section",
@@ -8,7 +8,7 @@ import { Section } from "../../model/section.model"
 })
 export class SectionComponent{
 
-    @Input() data!: Section;
+    @Input() data!: SectionContent;
 
     //Lista max 3 immagini
     //titolo

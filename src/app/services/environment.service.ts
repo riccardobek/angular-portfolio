@@ -27,4 +27,7 @@ export class EnvironmentService {
     return environment.profession;
   }
   
+  getEducation = () => {
+    return environment.education;
+  }
 }
